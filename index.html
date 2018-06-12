@@ -1209,6 +1209,8 @@
 </ul>
 <h3 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h3><h4 id="本地创建远程分支"><a href="#本地创建远程分支" class="headerlink" title="本地创建远程分支"></a>本地创建远程分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b develop</span><br><span class="line">git push origin develop:develop //冒号前develop 为远程分支名，后面为本地分支名称。</span><br></pre></td></tr></table></figure>
 <h4 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push origin :develop //推送一个空的分支到远程分支，其实就相当于删除远程分支</span><br><span class="line">git push origin —delete develop //直接删除分支</span><br></pre></td></tr></table></figure>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git merge develop</span><br><span class="line">//当前分支去合并 develop 分支的内容和 develop 保持一致</span><br></pre></td></tr></table></figure>
+<h3 id="添加-gitignore-文件"><a href="#添加-gitignore-文件" class="headerlink" title="添加.gitignore 文件"></a>添加.gitignore 文件</h3><p>​    <a href="https://www.jianshu.com/p/a09a9b40ad20" target="_blank" rel="noopener">简书链接</a></p>
 
           
         
