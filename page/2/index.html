@@ -229,6 +229,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/创建 cocoapods 文件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shibo Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Boshi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/13/创建 cocoapods 文件/" itemprop="url">创建 cocoapods 文件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T10:50:28+08:00">
+                2018-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="添加到-cocoapods"><a href="#添加到-cocoapods" class="headerlink" title="添加到 cocoapods"></a>添加到 cocoapods</h3><ul>
+<li><p>创建 GitHub 仓库 记得勾选 Add  a license 选 MIT License </p>
+<p><a href="https://www.kancloud.cn/thinkphp/github-tips/37890" target="_blank" rel="noopener">具体请看</a></p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1ft80po0pigj30go08a0tq.jpg" alt=""></p>
+</li>
+<li><p>推送到远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &apos;First commit&apos;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag 0.0.1</span><br><span class="line">git tag</span><br><span class="line">git push --tags</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加并填写 podspec 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod spec create xxxxx   (工程名字)</span><br></pre></td></tr></table></figure>
+<p>修改 xxxxx.podspec  项目目录下要添加一个 LICENSE 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">s.name         = &quot;xxxxx&quot;</span><br><span class="line">s.version      = &quot;0.0.1&quot;</span><br><span class="line">s.summary      = &quot;Test BSWebImage.&quot;</span><br><span class="line">s.homepage     = &quot;https://github.com/captain91/xxxxx.git&quot;</span><br><span class="line">s.license      = &#123; :type =&gt; &quot;MIT&quot;, :file =&gt; &quot;LICENSE&quot; &#125;</span><br><span class="line">s.author             = &#123; &quot;Shibo Sun&quot; =&gt; &quot;cxxxxxxxx@163.com&quot; &#125;</span><br><span class="line">s.platform     = :ios, &quot;9.0&quot;</span><br><span class="line">s.source       = &#123; :git =&gt; &quot;https://github.com/captain91/xxxxx.git&quot;, :tag =&gt; &quot;#&#123;s.version&#125;&quot; &#125;</span><br><span class="line">s.source_files  = &quot;ShareToCocoapods/**&quot; (要被共享的文件路径)</span><br><span class="line">s.requires_arc = true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存podspec文件，然后验证，如果通过会有如下信息，如果没有通过，查看之前的步骤是否有错误。需要注意的点</p>
+<table> <td bgcolor="DarkGray"><br><br>1.远程仓库是否有tag值，tag值是否和本地的tag值相等<br><br>2.podspec信息是否填写正确<br><br>3.本地库的东西是否推送到远程仓库<br><br></td></table>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod lib lint (碰到问题解决问，尽量不要有警告)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注册 trunk  然后去邮箱验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk register cxxxxxxxx@163.com &apos;cocoapods test&apos; --description=&apos;cocoapods test&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上传 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod trunk push xxxxx.podspec</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新本地仓库 （上传理想的情况下，有问题去 Google）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo update</span><br></pre></td></tr></table></figure>
+<p>这个时候，就pod search 一下你的工程。如果没有，就把~/Library/Caches/CocoaPods这里面的search_index.json文件删了再重新搜</p>
+</li>
+</ul>
+<h3 id="GitHub-上传超过-100M-的大文件"><a href="#GitHub-上传超过-100M-的大文件" class="headerlink" title="GitHub 上传超过 100M 的大文件"></a>GitHub 上传超过 100M 的大文件</h3><p><a href="https://www.jianshu.com/p/3f25cd20e392" target="_blank" rel="noopener">链接</a></p>
+<p>取你所需要的。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/22/嵌套加载RN页面/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1504,156 +1657,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/18/Mac 下配置apache/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shibo Sun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Boshi">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/18/Mac 下配置apache/" itemprop="url">Mac 下启动Apache 设置虚拟主机</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-18T15:54:45+08:00">
-                2018-01-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Mac-下启动Apache-服务器"><a href="#Mac-下启动Apache-服务器" class="headerlink" title="Mac 下启动Apache 服务器"></a>Mac 下启动Apache 服务器</h3><p>​    1.打开终端，开启Apache</p>
-<p>​        sudo apachectl start    //开启</p>
-<p>​        sudo apachectl restart    //重启</p>
-<p>​        sudo apachectl stop    //关闭</p>
-<p>​        在浏览器输入 localhost     网页出现 It works！</p>
-<p>​    2.Apache 服务器的文件路径（/Library/WebServer/Documents)</p>
-<p>​        浏览器默认加载的文件是index.html.en</p>
-<p>​    3.测试</p>
-<p>​        创建一个文件，如test.html</p>
-<p>​        接下来访问 localhost/test.html</p>
-<h3 id="设置虚拟主机"><a href="#设置虚拟主机" class="headerlink" title="设置虚拟主机"></a>设置虚拟主机</h3><p>​    Apache的默认根目录在 /Library/WebServer/下，配置虚拟主机后可以不理会默认的网站根目录，根据自己的需要在合适的地方建立不同的网站目录</p>
-<ol>
-<li>在终端运行“<code>sudo vi /etc/apache2/httpd.conf</code>”，打开Apche的配置文件</li>
-<li>在httpd.conf中找到“<code>#Include /private/etc/apache2/extra/httpd-vhosts.conf</code>”，去掉前面的“<code>＃</code>”，保存并退出。</li>
-<li>运行“<code>sudo apachectl restart</code>”，重启Apache后就开启了虚拟主机配置功能。</li>
-<li>运行“<code>sudo vi /etc/apache2/extra/httpd-vhosts.conf</code>”，就打开了配置虚拟主机文件httpd-vhost.conf，配置虚拟主机了。需要注意的是该文件默认开启了两个作为例子的虚拟主机：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerAdmin webmaster@dummy-host.example.com</span><br><span class="line">    DocumentRoot &quot;/usr/docs/dummy-host.example.com&quot;</span><br><span class="line">    ServerName dummy-host.example.com</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/dummy-host.example.com-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/dummy-host.example.com-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"> </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerAdmin webmaster@dummy-host2.example.com</span><br><span class="line">    DocumentRoot &quot;/usr/docs/dummy-host2.example.com&quot;</span><br><span class="line">    ServerName dummy-host2.example.com</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/dummy-host2.example.com-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/dummy-host2.example.com-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-<p>而实际上，这两个虚拟主机是不存在的，在没有配置任何其他虚拟主机时，可能会导致访问localhost时出现如下提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Forbidden</span><br><span class="line">You don&apos;t have permission to access /index.php on this server</span><br></pre></td></tr></table></figure>
-<p>最简单的办法就是在它们每行前面加上#，注释掉就好了，这样既能参考又不导致其他问题。</p>
-<p>5.添加如下配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot &quot;/Library/WebServer/Documents&quot;</span><br><span class="line">    ServerName localhost</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/localhost-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/localhost-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"> </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot &quot;/Users/snandy/work&quot;</span><br><span class="line">    ServerName mysites</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/sites-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/sites-access_log&quot; common</span><br><span class="line">    &lt;Directory /&gt;</span><br><span class="line">                Options Indexes FollowSymLinks MultiViews</span><br><span class="line">                AllowOverride None</span><br><span class="line">                Order deny,allow</span><br><span class="line">                Require all granted</span><br><span class="line">                Allow from all</span><br><span class="line">      &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-<p>保存退出，并重启Apache。</p>
-<p>6.运行“<code>sudo vi /etc/hosts</code>”，打开hosts配置文件，加入”<code>127.0.0.1 mysites</code>“，这样就可以配置完成sites虚拟主机了，可以访问“<a href="http://mysites”了，在10.8之前Mac" target="_blank" rel="noopener">http://mysites”了，在10.8之前Mac</a> OS X版本其内容和“<a href="http://localhost/~[用户名]”完全一致。" target="_blank" rel="noopener">http://localhost/~[用户名]”完全一致。</a></p>
-<p>7.注意，记录log的“<code>ErrorLog &quot;/private/var/log/apache2/sites-error_log&quot;</code>”也可以删掉，但记录日志其实是一个好习惯，在出现问题时可以帮助我们判断。如果保留这些log代码，一定log文件路径都是存在的，如果随便修改一个不存在的，会导致Apache无法服务而没有错误提示，这个比较恶心。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1699,7 +1707,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
