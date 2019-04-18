@@ -229,6 +229,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/22/嵌套加载RN页面/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shibo Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Boshi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/22/嵌套加载RN页面/" itemprop="url">嵌套加载 RN 界面</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-22T15:12:16+08:00">
+                2018-06-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="修改说明"><a href="#修改说明" class="headerlink" title="修改说明"></a>修改说明</h3><p>1.把 RN 文件夹里面的文件替换掉 BaseShell-develop 里面的文件 包括以下四个文        件,全部替换，然后 npm install 加载依赖</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fsjxnxyyokj30mu05iwf0.jpg" alt=""></p>
+<p>2.把 Native 整个文件全都拖拽到 iOS 项目中，配置 pch 文件路径 文件目录如下：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fsjxfmqr2ij30eu0se0ws.jpg" alt=""></p>
+<p>3.因为我的这个 私密相册 用到了cocoapods ，所以把 Podfile 文件拷贝到 iOS 项目目录下，运行 pod install ，然后重新打开 iOS 项目</p>
+<p>4.用我写的测试项目，还需要把图片资源添加到 Image.xcassets 中 在文件夹中的 PicResource</p>
+<p>5.开发完壳的 RN 代码后需要打包能本地加载的 jsbundle , 打包命令如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --entry-file ./index.js --bundle-output ./ios/bundle/rn.jsbundle --platform ios --assets-dest ./ios/bundle --dev false</span><br><span class="line"></span><br><span class="line">参数说明：</span><br><span class="line">--entry-file 指定入口文件 因为要打包ios平台，所以指定为rn项目的index.js作为入口</span><br><span class="line">--bundle-output 指定输出的jsbundle文件路径和文件名 指定到rn项目的ios工程文件夹下，记得一定要先创建bundle文件夹，不然终端会报文件夹找不到的错误</span><br><span class="line">--platform 指定平台类型</span><br><span class="line">--assets-dest 指定资源文件夹路径 assets文件夹的路径，包含图片、node模块等资源</span><br><span class="line">--dev 是否为开发模式 如果设置为false，不会产生警告，并且bundle会被压缩</span><br><span class="line">还有其他命令，比如：transformer、prepack、bundle-encoding等，可以到官网查看具体介绍。</span><br></pre></td></tr></table></figure>
+<p>打包完以后需要把 bundle 文件夹添加到工程项目中 然后测试加载本地 jsbundle 如果没有问题就可以 Archive 发包了。</p>
+<p>注意：如果运行完 pod install icon 加载不出来，参考我的这个博客 <a href="https://captain91.github.io/2018/06/11/关于icon显示不出来的问题/" target="_blank" rel="noopener">博客地址</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/11/关于icon显示不出来的问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1570,7 +1699,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
