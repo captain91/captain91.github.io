@@ -229,6 +229,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/11/关于icon显示不出来的问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shibo Sun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Boshi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/11/关于icon显示不出来的问题/" itemprop="url">关于不显示 icon 的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-11T15:15:39+08:00">
+                2018-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="关于icon显示不出来的问题"><a href="#关于icon显示不出来的问题" class="headerlink" title="关于icon显示不出来的问题"></a>关于icon显示不出来的问题</h3><p>主要还是因为cocoapods，还要就是iPad要添加图片 只需要添加如下三个尺寸就好了。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fs7a3m9047j312a0wwq8e.jpg" alt=""></p>
+<p>还需要在这个文件夹路径下添加东西路径如下：</p>
+<p>这是我项目的路径/SecretPhoto/Pods/Target\ Support\ Files/Pods-SecretPhoto/Pods-SecretPhoto-resources.sh </p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fs797kqld8j31bu0b4n1r.jpg" alt=""></p>
+<p>在这个文件夹下最下面添加如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--app-icon &quot;$&#123;ASSETCATALOG_COMPILER_APPICON_NAME&#125;&quot; --output-partial-info-plist &quot;$&#123;BUILD_DIR&#125;/assetcatalog_generated_info.plist&quot;</span><br></pre></td></tr></table></figure>
+<p>添加后如下</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fs7a6iycc9j31by08uju2.jpg" alt=""></p>
+<p>解决问题。</p>
+<p><strong><em>还有就是不要用xCode Beat 版本跑，不然还是不显示</em></strong></p>
+<p>我用的xCode10 beat 版跑真机iPhone X不显示，用xCode9.4稳定版，显示。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/杭州到黄山旅游纪实/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1439,7 +1570,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
