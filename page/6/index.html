@@ -79,17 +79,13 @@
 
 
 
-<meta name="description" content="这两天不是说立夏的吗？感觉在立秋一样，太冷了。 40 + 40 + 20 = 100;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Day-37">
-<meta property="og:url" content="http://yoursite.com/2019/05/07/Day-37/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Boshi">
+<meta property="og:url" content="http://yoursite.com/page/6/index.html">
 <meta property="og:site_name" content="Boshi">
-<meta property="og:description" content="这两天不是说立夏的吗？感觉在立秋一样，太冷了。 40 + 40 + 20 = 100;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-07T14:30:57.531Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Day-37">
-<meta name="twitter:description" content="这两天不是说立夏的吗？感觉在立秋一样，太冷了。 40 + 40 + 20 = 100;">
+<meta name="twitter:title" content="Boshi">
 
 
 
@@ -119,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/07/Day-37/"/>
+  <link rel="canonical" href="http://yoursite.com/page/6/"/>
 
 
 
 
 
-  <title>Day-37 | Boshi</title>
+  <title>Boshi</title>
   
 
 
@@ -144,7 +140,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +214,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -232,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/07/Day-37/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/18/Mac 下配置apache/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shibo Sun">
@@ -249,7 +246,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Day-37</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/18/Mac 下配置apache/" itemprop="url">Mac 下启动Apache 设置虚拟主机</a></h1>
         
 
         <div class="post-meta">
@@ -261,8 +260,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T22:30:57+08:00">
-                2019-05-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-18T15:54:45+08:00">
+                2018-01-18
               </time>
             
 
@@ -299,9 +298,37 @@
       
 
       
-        <p>这两天不是说立夏的吗？感觉在立秋一样，太冷了。</p>
-<p>40 + 40 + 20 = 100;</p>
+        
+          
+            <h3 id="Mac-下启动Apache-服务器"><a href="#Mac-下启动Apache-服务器" class="headerlink" title="Mac 下启动Apache 服务器"></a>Mac 下启动Apache 服务器</h3><p>​    1.打开终端，开启Apache</p>
+<p>​        sudo apachectl start    //开启</p>
+<p>​        sudo apachectl restart    //重启</p>
+<p>​        sudo apachectl stop    //关闭</p>
+<p>​        在浏览器输入 localhost     网页出现 It works！</p>
+<p>​    2.Apache 服务器的文件路径（/Library/WebServer/Documents)</p>
+<p>​        浏览器默认加载的文件是index.html.en</p>
+<p>​    3.测试</p>
+<p>​        创建一个文件，如test.html</p>
+<p>​        接下来访问 localhost/test.html</p>
+<h3 id="设置虚拟主机"><a href="#设置虚拟主机" class="headerlink" title="设置虚拟主机"></a>设置虚拟主机</h3><p>​    Apache的默认根目录在 /Library/WebServer/下，配置虚拟主机后可以不理会默认的网站根目录，根据自己的需要在合适的地方建立不同的网站目录</p>
+<ol>
+<li>在终端运行“<code>sudo vi /etc/apache2/httpd.conf</code>”，打开Apche的配置文件</li>
+<li>在httpd.conf中找到“<code>#Include /private/etc/apache2/extra/httpd-vhosts.conf</code>”，去掉前面的“<code>＃</code>”，保存并退出。</li>
+<li>运行“<code>sudo apachectl restart</code>”，重启Apache后就开启了虚拟主机配置功能。</li>
+<li>运行“<code>sudo vi /etc/apache2/extra/httpd-vhosts.conf</code>”，就打开了配置虚拟主机文件httpd-vhost.conf，配置虚拟主机了。需要注意的是该文件默认开启了两个作为例子的虚拟主机：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerAdmin webmaster@dummy-host.example.com</span><br><span class="line">    DocumentRoot &quot;/usr/docs/dummy-host.example.com&quot;</span><br><span class="line">    ServerName dummy-host.example.com</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/dummy-host.example.com-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/dummy-host.example.com-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"> </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerAdmin webmaster@dummy-host2.example.com</span><br><span class="line">    DocumentRoot &quot;/usr/docs/dummy-host2.example.com&quot;</span><br><span class="line">    ServerName dummy-host2.example.com</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/dummy-host2.example.com-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/dummy-host2.example.com-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<p>而实际上，这两个虚拟主机是不存在的，在没有配置任何其他虚拟主机时，可能会导致访问localhost时出现如下提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Forbidden</span><br><span class="line">You don&apos;t have permission to access /index.php on this server</span><br></pre></td></tr></table></figure>
+<p>最简单的办法就是在它们每行前面加上#，注释掉就好了，这样既能参考又不导致其他问题。</p>
+<p>5.添加如下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot &quot;/Library/WebServer/Documents&quot;</span><br><span class="line">    ServerName localhost</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/localhost-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/localhost-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"> </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot &quot;/Users/snandy/work&quot;</span><br><span class="line">    ServerName mysites</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/sites-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/sites-access_log&quot; common</span><br><span class="line">    &lt;Directory /&gt;</span><br><span class="line">                Options Indexes FollowSymLinks MultiViews</span><br><span class="line">                AllowOverride None</span><br><span class="line">                Order deny,allow</span><br><span class="line">                Require all granted</span><br><span class="line">                Allow from all</span><br><span class="line">      &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<p>保存退出，并重启Apache。</p>
+<p>6.运行“<code>sudo vi /etc/hosts</code>”，打开hosts配置文件，加入”<code>127.0.0.1 mysites</code>“，这样就可以配置完成sites虚拟主机了，可以访问“<a href="http://mysites”了，在10.8之前Mac" target="_blank" rel="noopener">http://mysites”了，在10.8之前Mac</a> OS X版本其内容和“<a href="http://localhost/~[用户名]”完全一致。" target="_blank" rel="noopener">http://localhost/~[用户名]”完全一致。</a></p>
+<p>7.注意，记录log的“<code>ErrorLog &quot;/private/var/log/apache2/sites-error_log&quot;</code>”也可以删掉，但记录日志其实是一个好习惯，在出现问题时可以帮助我们判断。如果保留这些log代码，一定log文件路径都是存在的，如果随便修改一个不存在的，会导致Apache无法服务而没有错误提示，这个比较恶心。</p>
 
+          
+        
       
     </div>
     
@@ -318,32 +345,12 @@
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/05/06/Day-36/" rel="next" title="Day-36">
-                <i class="fa fa-chevron-left"></i> Day-36
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/08/Day-38/" rel="prev" title="Day-38">
-                Day-38 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -353,11 +360,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+  </nav>
+
 
 
           </div>
@@ -365,10 +375,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -565,10 +571,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
