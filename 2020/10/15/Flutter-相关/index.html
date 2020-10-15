@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="把本地的分支替换成远程的分支，强制替换123git fetch --allgit rest --hard origin/master （这里的 master 要修改为对应的分支名）git pull 查看本地分支与远程分支的映射关系1git branch -vv 建立本地分支与远程分支的映射关系12345git branch -u origin/master (此处为远程分支名)或者用一下命令git">
+<meta name="description" content="原生集成 flutter 打包上传1.看官方网站的集成方式比较新和全 官网链接 ​    看推荐的 Option A 就可以 以下操作是在 Option A 的基础上 2.打包发布的时候需要在 my_flutter 文件路径下运行以下命令 1flutter build ios --release --no-codesign 3.然后直接走 Xcode Archive流程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git 常用使用">
-<meta property="og:url" content="http://yoursite.com/2019/11/04/git简单使用/index.html">
+<meta property="og:title" content="Flutter 相关">
+<meta property="og:url" content="http://yoursite.com/2020/10/15/Flutter-相关/index.html">
 <meta property="og:site_name" content="Boshi">
-<meta property="og:description" content="把本地的分支替换成远程的分支，强制替换123git fetch --allgit rest --hard origin/master （这里的 master 要修改为对应的分支名）git pull 查看本地分支与远程分支的映射关系1git branch -vv 建立本地分支与远程分支的映射关系12345git branch -u origin/master (此处为远程分支名)或者用一下命令git">
+<meta property="og:description" content="原生集成 flutter 打包上传1.看官方网站的集成方式比较新和全 官网链接 ​    看推荐的 Option A 就可以 以下操作是在 Option A 的基础上 2.打包发布的时候需要在 my_flutter 文件路径下运行以下命令 1flutter build ios --release --no-codesign 3.然后直接走 Xcode Archive流程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-03T02:47:40.817Z">
+<meta property="og:updated_time" content="2020-10-15T02:57:14.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 常用使用">
-<meta name="twitter:description" content="把本地的分支替换成远程的分支，强制替换123git fetch --allgit rest --hard origin/master （这里的 master 要修改为对应的分支名）git pull 查看本地分支与远程分支的映射关系1git branch -vv 建立本地分支与远程分支的映射关系12345git branch -u origin/master (此处为远程分支名)或者用一下命令git">
+<meta name="twitter:title" content="Flutter 相关">
+<meta name="twitter:description" content="原生集成 flutter 打包上传1.看官方网站的集成方式比较新和全 官网链接 ​    看推荐的 Option A 就可以 以下操作是在 Option A 的基础上 2.打包发布的时候需要在 my_flutter 文件路径下运行以下命令 1flutter build ios --release --no-codesign 3.然后直接走 Xcode Archive流程">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/04/git简单使用/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/10/15/Flutter-相关/"/>
 
 
 
 
 
-  <title>Git 常用使用 | Boshi</title>
+  <title>Flutter 相关 | Boshi</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/04/git简单使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/15/Flutter-相关/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shibo Sun">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git 常用使用</h1>
+          <h1 class="post-title" itemprop="name headline">Flutter 相关</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-04T22:58:29+08:00">
-                2019-11-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-15T10:57:14+08:00">
+                2020-10-15
               </time>
             
 
@@ -299,14 +299,11 @@
       
 
       
-        <h3 id="把本地的分支替换成远程的分支，强制替换"><a href="#把本地的分支替换成远程的分支，强制替换" class="headerlink" title="把本地的分支替换成远程的分支，强制替换"></a>把本地的分支替换成远程的分支，强制替换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git rest --hard origin/master （这里的 master 要修改为对应的分支名）</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-<h3 id="查看本地分支与远程分支的映射关系"><a href="#查看本地分支与远程分支的映射关系" class="headerlink" title="查看本地分支与远程分支的映射关系"></a>查看本地分支与远程分支的映射关系</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></table></figure>
-<h3 id="建立本地分支与远程分支的映射关系"><a href="#建立本地分支与远程分支的映射关系" class="headerlink" title="建立本地分支与远程分支的映射关系"></a>建立本地分支与远程分支的映射关系</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch -u origin/master (此处为远程分支名)</span><br><span class="line">或者用一下命令</span><br><span class="line">git branch --set-upstream-to origin/master (同上)</span><br><span class="line"></span><br><span class="line">建立关系以后 git pull 就会成功把远程拉到本地，或 git push 推送到远程分支</span><br></pre></td></tr></table></figure>
-<h3 id="撤销本地分支与远程分支的映射关系"><a href="#撤销本地分支与远程分支的映射关系" class="headerlink" title="撤销本地分支与远程分支的映射关系"></a>撤销本地分支与远程分支的映射关系</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --unset-upstream</span><br></pre></td></tr></table></figure>
-<h3 id="更新远程分支"><a href="#更新远程分支" class="headerlink" title="更新远程分支"></a>更新远程分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote update origin --prune</span><br></pre></td></tr></table></figure>
-<h3 id="删除本地和远程分支"><a href="#删除本地和远程分支" class="headerlink" title="删除本地和远程分支"></a>删除本地和远程分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">删除本地分支</span><br><span class="line">git branch -d &lt;BranchName&gt;</span><br><span class="line"></span><br><span class="line">删除远程分支</span><br><span class="line">git push origin --delete &lt;BranchName&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="保存和恢复进度-详细点击"><a href="#保存和恢复进度-详细点击" class="headerlink" title="保存和恢复进度     详细点击"></a>保存和恢复进度     <a href="https://blog.csdn.net/daguanjia11/article/details/73810577" target="_blank" rel="noopener">详细点击</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">保存当前工作进度,运行后可以切换分支</span><br><span class="line">git stash</span><br><span class="line"></span><br><span class="line">显示保存进度的列表</span><br><span class="line">git stash list</span><br><span class="line"></span><br><span class="line">恢复最新的进度到工作区</span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure>
-<h3 id="git还原到之前某个版本，本地和远程都还原"><a href="#git还原到之前某个版本，本地和远程都还原" class="headerlink" title="git还原到之前某个版本，本地和远程都还原"></a>git还原到之前某个版本，本地和远程都还原</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git log 查看之前的commit的id，找到想要还原的版本</span><br><span class="line">git reset --hard 44bd896bb726be3d3815f1f25d738a9cd402a477   还原到之前的某个版本</span><br><span class="line">git push -f origin master  强制push到远程</span><br></pre></td></tr></table></figure>
+        <h3 id="原生集成-flutter-打包上传"><a href="#原生集成-flutter-打包上传" class="headerlink" title="原生集成 flutter 打包上传"></a>原生集成 flutter 打包上传</h3><p>1.看官方网站的集成方式比较新和全 <a href="https://flutter.dev/docs/development/add-to-app/ios/project-setup" target="_blank" rel="noopener">官网链接</a></p>
+<p>​    看推荐的 Option A 就可以 以下操作是在 Option A 的基础上</p>
+<p>2.打包发布的时候需要在 my_flutter 文件路径下运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter build ios --release --no-codesign</span><br></pre></td></tr></table></figure>
+<p>3.然后直接走 Xcode Archive流程</p>
 
       
     </div>
@@ -331,8 +328,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/18/关于生成 静态库/" rel="next" title="关于生成静态库上传到 cocoapods">
-                <i class="fa fa-chevron-left"></i> 关于生成静态库上传到 cocoapods
+              <a href="/2019/11/04/git简单使用/" rel="next" title="Git 常用使用">
+                <i class="fa fa-chevron-left"></i> Git 常用使用
               </a>
             
           </div>
@@ -340,10 +337,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/10/15/Flutter-相关/" rel="prev" title="Flutter 相关">
-                Flutter 相关 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -457,7 +450,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#把本地的分支替换成远程的分支，强制替换"><span class="nav-number">1.</span> <span class="nav-text">把本地的分支替换成远程的分支，强制替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看本地分支与远程分支的映射关系"><span class="nav-number">2.</span> <span class="nav-text">查看本地分支与远程分支的映射关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立本地分支与远程分支的映射关系"><span class="nav-number">3.</span> <span class="nav-text">建立本地分支与远程分支的映射关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销本地分支与远程分支的映射关系"><span class="nav-number">4.</span> <span class="nav-text">撤销本地分支与远程分支的映射关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新远程分支"><span class="nav-number">5.</span> <span class="nav-text">更新远程分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除本地和远程分支"><span class="nav-number">6.</span> <span class="nav-text">删除本地和远程分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保存和恢复进度-详细点击"><span class="nav-number">7.</span> <span class="nav-text">保存和恢复进度     详细点击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git还原到之前某个版本，本地和远程都还原"><span class="nav-number">8.</span> <span class="nav-text">git还原到之前某个版本，本地和远程都还原</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原生集成-flutter-打包上传"><span class="nav-number">1.</span> <span class="nav-text">原生集成 flutter 打包上传</span></a></li></ol></div>
             
 
           </div>
