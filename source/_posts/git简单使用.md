@@ -1,5 +1,5 @@
 ---
-title: Git 常用使用
+title: Git 常用命令
 ---
 
 
@@ -70,5 +70,25 @@ git stash pop
 git log 查看之前的commit的id，找到想要还原的版本
 git reset --hard 44bd896bb726be3d3815f1f25d738a9cd402a477   还原到之前的某个版本
 git push -f origin master  强制push到远程
+```
+
+#### git 更换仓库地址
+
+```
+git remote set-url origin git@example.com/username/newproject.git
+
+还有一个简单粗暴的，直接找到 .git 打开 config 修改 url
+```
+
+#### 忽略本地修改
+
+```
+git update-index --skip-worktree /path/to/file
+```
+
+#### 删除已经添加 add 的文件
+
+```
+git rm --cached "文件路径"
 ```
 
