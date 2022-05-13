@@ -532,6 +532,22 @@
             
 
             
+    <div id="gitment-container"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            id: '1652336776000', // 可选。默认为 location.href
+            owner: 'captain91',
+            repo: 'git@github.com:captain91/blog-comments.git',
+            oauth: {
+                client_id: '1d7594ee5ecbbdba4785',
+                client_secret: 'e4af6cea5eb4180b5a622534b3128aa581af4af2',
+            },
+        })
+        gitment.render('gitment-container')
+    </script>
+
 
             
 
