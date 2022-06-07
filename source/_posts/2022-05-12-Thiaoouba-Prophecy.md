@@ -10,3 +10,4 @@ tags: book
 
 还有一些有趣的内容 [《选择的自由》](../../../../images/pdf/b-freedom.pdf)，[《怎样看，读，和提升辉光》](../../../../images/pdf/b-seeaura.pdf)
 
+[《Death; An Inside Story - A Book for all Those who Shall die (Sadhguru)》](../../../../images/pdf/b-Death(Sadhguru).pdf)
