@@ -4,7 +4,7 @@ date: 2019-11-04 10:36:16
 tags: git
 ---
 
-
+###  [git 分支的管理策略](https://www.ruanyifeng.com/blog/2012/07/git.html)
 
 ### 把本地的分支替换成远程的分支，强制替换
 
