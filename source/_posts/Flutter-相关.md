@@ -1,6 +1,7 @@
 ---
 title: Flutter 相关
 categories: iOS开发
+tags: flutter
 ---
 
 ### 原生集成 flutter 打包上传
