@@ -19,15 +19,15 @@
         <meta name="keywords" content="Boshi,Shibo,iOS,开发">
     
     <meta name="description" content="记录自己生活中的点滴，成长的脚步！">
-    <meta name="description" content="主要是 main.dart.js 和 字体。参考文章 https:&#x2F;&#x2F;blog.csdn.net&#x2F;ZuoYueLiang&#x2F;article&#x2F;details&#x2F;124651244 https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7095294020900880420#heading-4">
+    <meta name="description" content="主要是 main.dart.js 和 字体。参考文章 https:&#x2F;&#x2F;blog.csdn.net&#x2F;ZuoYueLiang&#x2F;article&#x2F;details&#x2F;124651244 https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7095294020900880420#heading-4 美团的解决方案https:&#x2F;&#x2F;tech.meituan.com&#x2F;2021&#x2F;12&#x2F;16&#x2F;flutterweb-practi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter Web 优化方案">
 <meta property="og:url" content="https://blog.boshi91.top/2022/06/17/Flutter-web-optimization/index.html">
 <meta property="og:site_name" content="Boshi的博客">
-<meta property="og:description" content="主要是 main.dart.js 和 字体。参考文章 https:&#x2F;&#x2F;blog.csdn.net&#x2F;ZuoYueLiang&#x2F;article&#x2F;details&#x2F;124651244 https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7095294020900880420#heading-4">
+<meta property="og:description" content="主要是 main.dart.js 和 字体。参考文章 https:&#x2F;&#x2F;blog.csdn.net&#x2F;ZuoYueLiang&#x2F;article&#x2F;details&#x2F;124651244 https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7095294020900880420#heading-4 美团的解决方案https:&#x2F;&#x2F;tech.meituan.com&#x2F;2021&#x2F;12&#x2F;16&#x2F;flutterweb-practi">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-17T09:28:28.000Z">
-<meta property="article:modified_time" content="2022-06-22T02:08:23.822Z">
+<meta property="article:modified_time" content="2022-07-25T03:03:56.191Z">
 <meta property="article:author" content="Shibo">
 <meta property="article:tag" content="flutter">
 <meta name="twitter:card" content="summary">
@@ -333,7 +333,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">28</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">120</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -497,6 +497,10 @@
         <p>主要是 main.dart.js 和 字体。参考文章</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ZuoYueLiang/article/details/124651244">https://blog.csdn.net/ZuoYueLiang/article/details/124651244</a></p>
 <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7095294020900880420#heading-4">https://juejin.cn/post/7095294020900880420#heading-4</a></p>
+<h4 id="美团的解决方案"><a href="#美团的解决方案" class="headerlink" title="美团的解决方案"></a>美团的解决方案</h4><p><a target="_blank" rel="noopener" href="https://tech.meituan.com/2021/12/16/flutterweb-practice-in-meituan-waimai.html">https://tech.meituan.com/2021/12/16/flutterweb-practice-in-meituan-waimai.html</a></p>
+<p>在没有达到美团优化的高度时，服务器开启 gzip 是很有必要的。</p>
+<p>不是很懂web，不知道怎么拆分 js,不过服务器开启压缩以后，main.dart.js 大概 400kb 左右。</p>
+<p>关于服务器如何开启 gzip <a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903602822070280">https://juejin.cn/post/6844903602822070280</a></p>
 
     </article>
     <!-- license -->
@@ -505,7 +509,7 @@
             <p>原文作者：<a href="https://blog.boshi91.top">Shibo</a>
             <p>原文链接：<a href="https://blog.boshi91.top/2022/06/17/Flutter-web-optimization/">https://blog.boshi91.top/2022/06/17/Flutter-web-optimization/</a>
             <p>发表日期：<a href="https://blog.boshi91.top/2022/06/17/Flutter-web-optimization/">2022-06-06 17:28:28</a>
-            <p>更新日期：<a href="https://blog.boshi91.top/2022/06/17/Flutter-web-optimization/">2022-06-06 10:08:23</a>
+            <p>更新日期：<a href="https://blog.boshi91.top/2022/06/17/Flutter-web-optimization/">2022-07-07 11:03:56</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -658,7 +662,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                
+                <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BE%8E%E5%9B%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">1.</span> <span class="toc-text">美团的解决方案</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
