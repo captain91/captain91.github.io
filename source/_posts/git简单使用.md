@@ -27,6 +27,7 @@ git branch -vv
 ### 建立本地分支与远程分支的映射关系
 
 ```
+git remote add origin 仓库地址
 git branch -u origin/master (此处为远程分支名)
 或者用一下命令
 git branch --set-upstream-to origin/master (同上)
