@@ -43,6 +43,8 @@ webview_flutter_plus: ^0.3.0+2
     - assets/cmp/master.css
 ```
 
+其实是有插件的，就是把文件拖进项目，自动在 pubspec.yaml 中生成资源路径，还没研究。
+
 这里有个简单的 Python 脚本，可以打印文件路径到命令窗口，然后复制到 pubspec.yaml 中就可以了，dir 换成要加载的网站资源路径
 
 ```python
