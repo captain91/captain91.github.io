@@ -19,23 +19,25 @@
         <meta name="keywords" content="Boshi,Shibo,iOS,开发">
     
     <meta name="description" content="记录自己生活中的点滴，成长的脚步！">
-    <meta name="description" content="Mac 下启动Apache 服务器​	1.打开终端，开启Apache ​		sudo apachectl start	&#x2F;&#x2F;开启 ​		sudo apachectl restart	&#x2F;&#x2F;重启 ​		sudo apachectl stop	&#x2F;&#x2F;关闭 ​		在浏览器输入 localhost 	网页出现 It works！ ​	2.Apache">
+    <meta name="description" content="访问的路径就是 你的应用下的沙河目录 Documents只是开启了权限，就会共享到系统 Files 下；在项目中的 Info.plist 中添加以下两项内容，并设置为 YES  Source Code 1234&lt;key&gt;LSSupportsOpeningDocumentsInPlace&lt;&#x2F;key&gt;&lt;true&#x2F;&gt;&lt;key&gt;UIFileSharingEn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 下启动Apache 设置虚拟主机">
-<meta property="og:url" content="https://blog.boshi91.top/2018/01/18/Mac-%E4%B8%8B%E9%85%8D%E7%BD%AEapache/index.html">
+<meta property="og:title" content="访问系统的 Files 应用,添加视频并读取">
+<meta property="og:url" content="https://blog.boshi91.top/2022/08/10/visit-apple-files/index.html">
 <meta property="og:site_name" content="Boshi的博客">
-<meta property="og:description" content="Mac 下启动Apache 服务器​	1.打开终端，开启Apache ​		sudo apachectl start	&#x2F;&#x2F;开启 ​		sudo apachectl restart	&#x2F;&#x2F;重启 ​		sudo apachectl stop	&#x2F;&#x2F;关闭 ​		在浏览器输入 localhost 	网页出现 It works！ ​	2.Apache">
+<meta property="og:description" content="访问的路径就是 你的应用下的沙河目录 Documents只是开启了权限，就会共享到系统 Files 下；在项目中的 Info.plist 中添加以下两项内容，并设置为 YES  Source Code 1234&lt;key&gt;LSSupportsOpeningDocumentsInPlace&lt;&#x2F;key&gt;&lt;true&#x2F;&gt;&lt;key&gt;UIFileSharingEn">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-01-18T07:54:45.000Z">
-<meta property="article:modified_time" content="2018-01-18T07:54:45.000Z">
+<meta property="og:image" content="https://blog.boshi91.top/images/ios/info.png">
+<meta property="article:published_time" content="2022-08-10T08:43:42.000Z">
+<meta property="article:modified_time" content="2022-08-10T09:19:03.493Z">
 <meta property="article:author" content="Shibo">
-<meta property="article:tag" content="iOS,Boshi,Shibo,程序员,开发">
+<meta property="article:tag" content="iOS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.boshi91.top/images/ios/info.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Mac 下启动Apache 设置虚拟主机 · Boshi的博客</title>
+    <title>访问系统的 Files 应用,添加视频并读取 · Boshi的博客</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -260,7 +262,7 @@
                 <a href="/">Boshi的博客</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">Mac 下启动Apache 设置虚拟主机</a>
+                <a href="#" class="post-name">访问系统的 Files 应用,添加视频并读取</a>
             </div>
         </div>
     
@@ -306,7 +308,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                Mac 下启动Apache 设置虚拟主机
+                访问系统的 Files 应用,添加视频并读取
             <!-- 404 -->
             
         </h1>
@@ -323,15 +325,23 @@
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="iOS">iOS</a>
+    
+</div>
+
+                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">756</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">364</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2018/01/18</span>
+                    <span class="post-intro-time">2022/08/10</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -486,44 +496,31 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h3 id="Mac-下启动Apache-服务器"><a href="#Mac-下启动Apache-服务器" class="headerlink" title="Mac 下启动Apache 服务器"></a>Mac 下启动Apache 服务器</h3><p>​	1.打开终端，开启Apache</p>
-<p>​		sudo apachectl start	&#x2F;&#x2F;开启</p>
-<p>​		sudo apachectl restart	&#x2F;&#x2F;重启</p>
-<p>​		sudo apachectl stop	&#x2F;&#x2F;关闭</p>
-<p>​		在浏览器输入 localhost 	网页出现 It works！</p>
-<p>​	2.Apache 服务器的文件路径（&#x2F;Library&#x2F;WebServer&#x2F;Documents)</p>
-<p>​		浏览器默认加载的文件是index.html.en</p>
-<p>​	3.测试</p>
-<p>​		创建一个文件，如test.html</p>
-<p>​		接下来访问 localhost&#x2F;test.html</p>
-<h3 id="设置虚拟主机"><a href="#设置虚拟主机" class="headerlink" title="设置虚拟主机"></a>设置虚拟主机</h3><p>​	Apache的默认根目录在 &#x2F;Library&#x2F;WebServer&#x2F;下，配置虚拟主机后可以不理会默认的网站根目录，根据自己的需要在合适的地方建立不同的网站目录</p>
-<ol>
-<li>在终端运行“<code>sudo vi /etc/apache2/httpd.conf</code>”，打开Apche的配置文件</li>
-<li>在httpd.conf中找到“<code>#Include /private/etc/apache2/extra/httpd-vhosts.conf</code>”，去掉前面的“<code>＃</code>”，保存并退出。</li>
-<li>运行“<code>sudo apachectl restart</code>”，重启Apache后就开启了虚拟主机配置功能。</li>
-<li>运行“<code>sudo vi /etc/apache2/extra/httpd-vhosts.conf</code>”，就打开了配置虚拟主机文件httpd-vhost.conf，配置虚拟主机了。需要注意的是该文件默认开启了两个作为例子的虚拟主机：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerAdmin webmaster@dummy-host.example.com</span><br><span class="line">    DocumentRoot &quot;/usr/docs/dummy-host.example.com&quot;</span><br><span class="line">    ServerName dummy-host.example.com</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/dummy-host.example.com-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/dummy-host.example.com-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"> </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerAdmin webmaster@dummy-host2.example.com</span><br><span class="line">    DocumentRoot &quot;/usr/docs/dummy-host2.example.com&quot;</span><br><span class="line">    ServerName dummy-host2.example.com</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/dummy-host2.example.com-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/dummy-host2.example.com-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+        <h2 id="访问的路径就是-你的应用下的沙河目录-Documents"><a href="#访问的路径就是-你的应用下的沙河目录-Documents" class="headerlink" title="访问的路径就是 你的应用下的沙河目录 Documents"></a>访问的路径就是 你的应用下的沙河目录 Documents</h2><p>只是开启了权限，就会共享到系统 Files 下；在项目中的 Info.plist 中添加以下两项内容，并设置为 YES</p>
+<p><img src="/../images/ios/info.png" alt="info"></p>
+<p>Source Code</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;key&gt;LSSupportsOpeningDocumentsInPlace&lt;/key&gt;</span><br><span class="line">&lt;true/&gt;</span><br><span class="line">&lt;key&gt;UIFileSharingEnabled&lt;/key&gt;</span><br><span class="line">&lt;true/&gt;</span><br></pre></td></tr></table></figure>
 
-<p>而实际上，这两个虚拟主机是不存在的，在没有配置任何其他虚拟主机时，可能会导致访问localhost时出现如下提示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Forbidden</span><br><span class="line">You don&#x27;t have permission to access /index.php on this server</span><br></pre></td></tr></table></figure>
+<p>添加完以后跑一下项目。</p>
+<p>Documents 文件夹下如果没有文件，那么在系统 Files 中是不显示你的 app 名称的文件夹的。 需要先在 Documents 下创建一个文件夹或者，打开手机的 照片-》 选中一张照片 -》点击分享 -》下拉到 存储到“文件” -》 我的iPhone 展开，就可以看到你的 app 命名的文件夹了。</p>
+<p>在 Files 里面的文件夹，会将沙盒内 Documents 文件夹内的所有文件都显示出来，因此苹果建议在此文件夹中只存放用户创建的文件，如果将 App 创建的文件也放到这个目录下的话，会使这个文件夹看起来很杂乱。</p>
+<p>如何打开了以上两个权限，肯定不建议把敏感的信息保存到沙盒内 Documents 文件夹内。</p>
+<p>对文件的增删改查操作自己写，我只是想读取数据，一些代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//文件路径</span><br><span class="line">-(NSString *)filesPath&#123;</span><br><span class="line">    return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//从文件中读取内容</span><br><span class="line">-(void)getFiles&#123;</span><br><span class="line">    NSString *path = [self filesPath];</span><br><span class="line">    </span><br><span class="line">    NSFileManager *manager = [NSFileManager defaultManager];</span><br><span class="line">    NSArray *files =  [manager subpathsAtPath:path];</span><br><span class="line">    NSLog(@&quot;%@&quot;, files);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>最简单的办法就是在它们每行前面加上#，注释掉就好了，这样既能参考又不导致其他问题。</p>
-<p>5.添加如下配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot &quot;/Library/WebServer/Documents&quot;</span><br><span class="line">    ServerName localhost</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/localhost-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/localhost-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"> </span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot &quot;/Users/snandy/work&quot;</span><br><span class="line">    ServerName mysites</span><br><span class="line">    ErrorLog &quot;/private/var/log/apache2/sites-error_log&quot;</span><br><span class="line">    CustomLog &quot;/private/var/log/apache2/sites-access_log&quot; common</span><br><span class="line">    &lt;Directory /&gt;</span><br><span class="line">                Options Indexes FollowSymLinks MultiViews</span><br><span class="line">                AllowOverride None</span><br><span class="line">                Order deny,allow</span><br><span class="line">                Require all granted</span><br><span class="line">                Allow from all</span><br><span class="line">      &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
 
-<p>保存退出，并重启Apache。</p>
-<p>6.运行“<code>sudo vi /etc/hosts</code>”，打开hosts配置文件，加入”<code>127.0.0.1 mysites</code>“，这样就可以配置完成sites虚拟主机了，可以访问“<a target="_blank" rel="noopener" href="http://mysites”了,在10.8之前mac/">http://mysites”了，在10.8之前Mac</a> OS X版本其内容和“<a target="_blank" rel="noopener" href="http://localhost/~[%E7%94%A8%E6%88%B7%E5%90%8D]%E2%80%9D%E5%AE%8C%E5%85%A8%E4%B8%80%E8%87%B4%E3%80%82">http://localhost/~[用户名]”完全一致。</a></p>
-<p>7.注意，记录log的“<code>ErrorLog &quot;/private/var/log/apache2/sites-error_log&quot;</code>”也可以删掉，但记录日志其实是一个好习惯，在出现问题时可以帮助我们判断。如果保留这些log代码，一定log文件路径都是存在的，如果随便修改一个不存在的，会导致Apache无法服务而没有错误提示，这个比较恶心。</p>
+
+
+
 
     </article>
     <!-- license -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="https://blog.boshi91.top">Shibo</a>
-            <p>原文链接：<a href="https://blog.boshi91.top/2018/01/18/Mac-%E4%B8%8B%E9%85%8D%E7%BD%AEapache/">https://blog.boshi91.top/2018/01/18/Mac-%E4%B8%8B%E9%85%8D%E7%BD%AEapache/</a>
-            <p>发表日期：<a href="https://blog.boshi91.top/2018/01/18/Mac-%E4%B8%8B%E9%85%8D%E7%BD%AEapache/">2018-01-01 15:54:45</a>
-            <p>更新日期：<a href="https://blog.boshi91.top/2018/01/18/Mac-%E4%B8%8B%E9%85%8D%E7%BD%AEapache/">2018-01-01 15:54:45</a>
+            <p>原文链接：<a href="https://blog.boshi91.top/2022/08/10/visit-apple-files/">https://blog.boshi91.top/2022/08/10/visit-apple-files/</a>
+            <p>发表日期：<a href="https://blog.boshi91.top/2022/08/10/visit-apple-files/">2022-08-08 16:43:42</a>
+            <p>更新日期：<a href="https://blog.boshi91.top/2022/08/10/visit-apple-files/">2022-08-08 17:19:03</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -531,13 +528,13 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2018/01/19/%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" title="区块链相关知识，持续更新中。。。">
-                    <div class="nextTitle">区块链相关知识，持续更新中。。。</div>
-                </a>
-            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2022/08/04/flutter-webview-interact/" title="Flutter 加载本地网站，flutter 和 web 之间交互">
+                    <div class="prevTitle">Flutter 加载本地网站，flutter 和 web 之间交互</div>
+                </a>
             
         </li>
     </ul>
@@ -676,7 +673,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac-%E4%B8%8B%E5%90%AF%E5%8A%A8Apache-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">Mac 下启动Apache 服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA"><span class="toc-number">2.</span> <span class="toc-text">设置虚拟主机</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E7%9A%84%E8%B7%AF%E5%BE%84%E5%B0%B1%E6%98%AF-%E4%BD%A0%E7%9A%84%E5%BA%94%E7%94%A8%E4%B8%8B%E7%9A%84%E6%B2%99%E6%B2%B3%E7%9B%AE%E5%BD%95-Documents"><span class="toc-number">1.</span> <span class="toc-text">访问的路径就是 你的应用下的沙河目录 Documents</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
