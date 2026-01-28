@@ -409,6 +409,42 @@
                 <main class="main index-page">
             
         <article class="index-post">
+            <a class="abstract-title" href="/2022/05/12/FFmpeg-Video-Audio/">
+                <span class="abstract-title-text">使用 FFmpeg 分离视频流和音频流</span>
+            </a>
+            <div class="abstract-content">
+                1ffmpeg -i 1.mp4 
+
+执行该命令可以直接查看视频的信息，其中就有视频流（Video: h264）和音频流（Audio: aac）
+使用参数 -vcodec copy -an 和 -acodec copy -vn 可以分离出视频流和音频流。
+分离视频1ffmpeg -i 1.mp4 -vcodec copy -an mav.mp4
+
+分离音频 （注意格式 不然会报错）1ffmpeg -i 1.mp4 -acodec copy -vn m.m4a
+
+把 .m4a 转 .mp31ffmpeg -i m.m4a m.mp3
+
+
+
+参考：
+使用 ffmpeg 分离视频流和音频流
+
+            </div>
+            <!-- read more -->
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/05/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/12</span>
+                </div>
+                <!-- tags -->
+                    <div class="abstract-tags" >
+        <a class="post-tag" href="javascript:void(0);" data-tags="tool">tool</a>
+</div>
+
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+            
+        <article class="index-post">
             <a class="abstract-title" href="/2022/05/12/Add-Local-Assets/">
                 <span class="abstract-title-text">测试添加本地图片资源</span>
             </a>
@@ -603,15 +639,20 @@
         
         
         
+        
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 24
+        Total : 25
         </div>
         <!-- search  -->
     </div>
     <div class="post-archive">
             <div class="archive-year"> 2026 </div>
             <ul class="year-list">
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/28</span>
+            <a class="archive-post-title" href="/2026/01/28/2026-01-28-stock-md/">第二天</a>
+        </li>
         <li class="archive-post-item">
             <span class="archive-post-date">01/27</span>
             <a class="archive-post-title" href="/2026/01/27/2026-01-27-stock1-md/">第一天</a>
