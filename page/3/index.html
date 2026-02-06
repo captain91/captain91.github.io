@@ -409,6 +409,30 @@
                 <main class="main index-page">
             
         <article class="index-post">
+            <a class="abstract-title" href="/2022/05/13/%E5%85%B3%E4%BA%8Eicon%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%87%BA%E6%9D%A5%E7%9A%84%E9%97%AE%E9%A2%98/">
+                <span class="abstract-title-text">关于不显示 icon 的问题</span>
+            </a>
+            <div class="abstract-content">
+                关于icon显示不出来的问题主要还是因为cocoapods，还要就是iPad要添加图片 只需要添加如下三个尺寸就好了。
+
+还需要在这个文件夹路径下添加东西路径如下：
+这是我项目的路径&#x2F;SecretPhoto&#x2F;Pods&#x2F;Target\ Support\ Files&#x2F;Pods-SecretPhoto&#x2F;Pods-SecretPhoto-resources.sh 
+
+在这个文件夹下最下面添加如下代码
+1--app-icon &quot;$&#123;ASSETCATALOG_COMPILER_APPICON_NAME&#125;&quot; --...
+            </div>
+            <!-- read more -->
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/05/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/13</span>
+                </div>
+                <!-- tags -->
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+            
+        <article class="index-post">
             <a class="abstract-title" href="/2022/05/13/%E5%88%9B%E5%BB%BA-cocoapods-%E6%96%87%E4%BB%B6/">
                 <span class="abstract-title-text">创建 cocoapods 文件</span>
             </a>
@@ -655,37 +679,6 @@ develop 为开发分支，一般包含正在开发的所有新特性，用于测
             </div>
         </article>
         <div class="index-post-divider"></div>
-            
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/05/12/Add-Local-Assets/">
-                <span class="abstract-title-text">测试添加本地图片资源</span>
-            </a>
-            <div class="abstract-content">
-                以后用到素材就用本地，免得上传到云的图片过期。
-直接在 hexo &#x2F;source 目录下新建 images 文件夹，然后在 md 中引用。
-1![ww01](../images/ww01.jpeg)
-
-
-来一起欣赏下 盖尔加朵 Wonder Women 1
-
-
-
-
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/13">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/12</span>
-                </div>
-                <!-- tags -->
-                    <div class="abstract-tags" >
-        <a class="post-tag" href="javascript:void(0);" data-tags="blog">blog</a>
-</div>
-
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
     <!-- paginator  -->
         <nav class="page-nav">
             <a class="extend prev" rel="prev" href="/page/2/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">NEXT &gt;</a>
@@ -781,15 +774,20 @@ develop 为开发分支，一般包含正在开发的所有新特性，用于测
         
         
         
+        
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 33
+        Total : 34
         </div>
         <!-- search  -->
     </div>
     <div class="post-archive">
             <div class="archive-year"> 2026 </div>
             <ul class="year-list">
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/06</span>
+            <a class="archive-post-title" href="/2026/02/06/%E7%AC%AC11%E5%A4%A9/">第11天</a>
+        </li>
         <li class="archive-post-item">
             <span class="archive-post-date">02/05</span>
             <a class="archive-post-title" href="/2026/02/05/%E7%AC%AC10%E5%A4%A9/">第10天</a>
