@@ -409,6 +409,34 @@
                 <main class="main index-page">
             
         <article class="index-post">
+            <a class="abstract-title" href="/2022/05/13/Git%E7%9B%B8%E5%85%B3/">
+                <span class="abstract-title-text">Git 相关</span>
+            </a>
+            <div class="abstract-content">
+                Git 分支规范主分支 master
+master 为主分支，要保护它的稳定性，随时可以用来上线。
+我们不应该直接在master 分支上直接提交代码，而是从其他分支的合并。
+
+开发分支 develop
+develop 为开发分支，一般包含正在开发的所有新特性，用于测试环境部署和测试。
+我们不应该直接在develop 分支上直接提交代码，也不应该把未经测试的代码合并进来，应该尽量保持测试环境干净可用。
+当 develop 太 “脏”以至于不能继续测试之后，可以考虑重新从 master 拉取一次。
+
+性能分支 feature
+分支命名：feature&#x2F; 开头的为特性分支，命名规则为...
+            </div>
+            <!-- read more -->
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/05/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/13</span>
+                </div>
+                <!-- tags -->
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+            
+        <article class="index-post">
             <a class="abstract-title" href="/2022/05/13/Mac-%E4%B8%8B%E9%85%8D%E7%BD%AEapache/">
                 <span class="abstract-title-text">Mac 下启动Apache 设置虚拟主机</span>
             </a>
@@ -704,15 +732,20 @@
         
         
         
+        
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 37
+        Total : 38
         </div>
         <!-- search  -->
     </div>
     <div class="post-archive">
             <div class="archive-year"> 2026 </div>
             <ul class="year-list">
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/10</span>
+            <a class="archive-post-title" href="/2026/02/10/%E7%AC%AC15%E5%A4%A9/">第15天</a>
+        </li>
         <li class="archive-post-item">
             <span class="archive-post-date">02/09</span>
             <a class="archive-post-title" href="/2026/02/09/%E7%AC%AC14%E5%A4%A9/">第14天</a>
