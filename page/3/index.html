@@ -409,6 +409,34 @@
                 <main class="main index-page">
             
         <article class="index-post">
+            <a class="abstract-title" href="/2022/08/10/visit-apple-files/">
+                <span class="abstract-title-text">访问系统的 Files 应用,添加视频并读取</span>
+            </a>
+            <div class="abstract-content">
+                访问的路径就是 你的应用下的沙河目录 Documents只是开启了权限，就会共享到系统 Files 下；在项目中的 Info.plist 中添加以下两项内容，并设置为 YES
+
+Source Code
+1234&lt;key&gt;LSSupportsOpeningDocumentsInPlace&lt;/key&gt;&lt;true/&gt;&lt;key&gt;UIFileSharingEnabled&lt;/key&gt;&lt;true/&gt;
+
+添加完以后跑一下项目。
+Documents 文件夹下如果没有文件，那么在系统 Files 中是不显示你的 app 名称的文件夹的。...
+            </div>
+            <!-- read more -->
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2026/01/27">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/08/10</span>
+                </div>
+                <!-- tags -->
+                    <div class="abstract-tags" >
+        <a class="post-tag" href="javascript:void(0);" data-tags="iOS">iOS</a>
+</div>
+
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+            
+        <article class="index-post">
             <a class="abstract-title" href="/2022/08/04/flutter-webview-interact/">
                 <span class="abstract-title-text">Flutter 加载本地网站，flutter 和 web 之间交互</span>
             </a>
@@ -633,31 +661,6 @@ Making a React Native Components Pod
             </div>
         </article>
         <div class="index-post-divider"></div>
-            
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/05/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">
-                <span class="abstract-title-text">区块链相关知识，持续更新中。。。</span>
-            </a>
-            <div class="abstract-content">
-                相关知识1、计算机存储信息的最小单位： 　      
-​          位 bit (比特)(Binary Digits)：存放一位二进制数，即 0 或 1，最小的存储单位。
-2、计算机存储容量基本单位是字节
-　　     字节 byte：8个二进制位为一个字节(B)，最常用的单位。
-​    	    一个英文字母(不分大小写)占一个字节的空间，一个中文汉字占两个字节的空间．​          符号：英文标点占一个字节，中文标点占两个字节．
-关于李笑来 和 郑伊廷 事件​	简书链接
-关于领取糖果的介绍分裂币、空投币、获得免费“糖果”的同时如何保证自己的财产安全 粹客网
-你的分叉...
-            </div>
-            <!-- read more -->
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/13">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/13</span>
-                </div>
-                <!-- tags -->
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
     <!-- paginator  -->
         <nav class="page-nav">
             <a class="extend prev" rel="prev" href="/page/2/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">NEXT &gt;</a>
@@ -761,15 +764,20 @@ Making a React Native Components Pod
         
         
         
+        
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 41
+        Total : 42
         </div>
         <!-- search  -->
     </div>
     <div class="post-archive">
             <div class="archive-year"> 2026 </div>
             <ul class="year-list">
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/14</span>
+            <a class="archive-post-title" href="/2026/02/14/%E7%AC%AC19%E5%A4%A9/">第19天</a>
+        </li>
         <li class="archive-post-item">
             <span class="archive-post-date">02/13</span>
             <a class="archive-post-title" href="/2026/02/13/%E7%AC%AC18%E5%A4%A9/">第18天</a>
